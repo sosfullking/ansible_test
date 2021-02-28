@@ -3,12 +3,17 @@
   become: true
   tasks: 
      
-      - name: isntall nginx on Ubuntu
-        apt: 
-          update_cache: yes
-          name: 
-            - nginx
-          state: latest
+  # - name: isntall nginx on Ubuntu
+        # apt: 
+        # update_cache: yes
+          # name: 
+          # - nginx
+              #          state: latest
+      
+      - name: start nginx.service
+        service: 
+          name: nginx.service 
+          state: started 
        
 
       - name: Copy file 
